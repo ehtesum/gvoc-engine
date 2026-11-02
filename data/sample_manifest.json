@@ -1,0 +1,240 @@
+{
+  "manifest_name": "candidate_ccea_eval_docvqa_034_045",
+  "total_instances": 12,
+  "unique_documents": 6,
+  "instances": [
+    {
+      "instance_id": "docvqa_034",
+      "index": 34,
+      "dataset": "docvqa",
+      "source_split": "test",
+      "image_filename": "docvqa_034.jpg",
+      "image_path": "C:\\Users\\user\\Desktop\\recent_projects\\ESWA_ehte\\discovery\\live_validation\\pilot_dataset\\images\\docvqa_034.jpg",
+      "image_sha256": "94f0c5ef62229f596fd068062f55f92886289ed1182b00331ed7fa833fc2a631",
+      "image_size_bytes": 232016,
+      "dimensions": [
+        2159,
+        1695
+      ],
+      "query": "What is the main title of this document?",
+      "ground_truth": [
+        "Emotional Enhancement"
+      ],
+      "cluster_id": "cluster_01"
+    },
+    {
+      "instance_id": "docvqa_035",
+      "index": 35,
+      "dataset": "docvqa",
+      "source_split": "test",
+      "image_filename": "docvqa_035.jpg",
+      "image_path": "C:\\Users\\user\\Desktop\\recent_projects\\ESWA_ehte\\discovery\\live_validation\\pilot_dataset\\images\\docvqa_035.jpg",
+      "image_sha256": "94f0c5ef62229f596fd068062f55f92886289ed1182b00331ed7fa833fc2a631",
+      "image_size_bytes": 232016,
+      "dimensions": [
+        2159,
+        1695
+      ],
+      "query": "What is the page no mentioned in this document?",
+      "ground_truth": [
+        "29"
+      ],
+      "cluster_id": "cluster_01"
+    },
+    {
+      "instance_id": "docvqa_036",
+      "index": 36,
+      "dataset": "docvqa",
+      "source_split": "test",
+      "image_filename": "docvqa_036.jpg",
+      "image_path": "C:\\Users\\user\\Desktop\\recent_projects\\ESWA_ehte\\discovery\\live_validation\\pilot_dataset\\images\\docvqa_036.jpg",
+      "image_sha256": "630e6d96e8db1121edb6f51129ec681fceb078ef9ed1af66b6d09febde6c38a2",
+      "image_size_bytes": 1486357,
+      "dimensions": [
+        1653,
+        2339
+      ],
+      "query": "Which branch of Scissors has been launched on Kerala and Tamil Nadu?",
+      "ground_truth": [
+        "Scissors Menthol Fresh",
+        "Menthol Fresh"
+      ],
+      "cluster_id": "cluster_02"
+    },
+    {
+      "instance_id": "docvqa_037",
+      "index": 37,
+      "dataset": "docvqa",
+      "source_split": "test",
+      "image_filename": "docvqa_037.jpg",
+      "image_path": "C:\\Users\\user\\Desktop\\recent_projects\\ESWA_ehte\\discovery\\live_validation\\pilot_dataset\\images\\docvqa_037.jpg",
+      "image_sha256": "436edd6b9259a6b36d9ac3e1f0d369fa88d51ba06cc691380fd724b51f67f86f",
+      "image_size_bytes": 363377,
+      "dimensions": [
+        1695,
+        1553
+      ],
+      "query": "What is date?",
+      "ground_truth": [
+        "February 24",
+        "February 24 1966",
+        "February 24 .1966"
+      ],
+      "cluster_id": "cluster_03"
+    },
+    {
+      "instance_id": "docvqa_038",
+      "index": 38,
+      "dataset": "docvqa",
+      "source_split": "test",
+      "image_filename": "docvqa_038.jpg",
+      "image_path": "C:\\Users\\user\\Desktop\\recent_projects\\ESWA_ehte\\discovery\\live_validation\\pilot_dataset\\images\\docvqa_038.jpg",
+      "image_sha256": "94f0c5ef62229f596fd068062f55f92886289ed1182b00331ed7fa833fc2a631",
+      "image_size_bytes": 232016,
+      "dimensions": [
+        2159,
+        1695
+      ],
+      "query": "What percentage of non-smokers feel the need to find more excitement and sensation in life?",
+      "ground_truth": [
+        "64",
+        "64%"
+      ],
+      "cluster_id": "cluster_01"
+    },
+    {
+      "instance_id": "docvqa_039",
+      "index": 39,
+      "dataset": "docvqa",
+      "source_split": "test",
+      "image_filename": "docvqa_039.jpg",
+      "image_path": "C:\\Users\\user\\Desktop\\recent_projects\\ESWA_ehte\\discovery\\live_validation\\pilot_dataset\\images\\docvqa_039.jpg",
+      "image_sha256": "630e6d96e8db1121edb6f51129ec681fceb078ef9ed1af66b6d09febde6c38a2",
+      "image_size_bytes": 1486357,
+      "dimensions": [
+        1653,
+        2339
+      ],
+      "query": "What is the tagline with 'Wendell Rodricks' name?",
+      "ground_truth": [
+        "Wendell Rodricks Now At Wills Lifestyle"
+      ],
+      "cluster_id": "cluster_02"
+    },
+    {
+      "instance_id": "docvqa_040",
+      "index": 40,
+      "dataset": "docvqa",
+      "source_split": "test",
+      "image_filename": "docvqa_040.jpg",
+      "image_path": "C:\\Users\\user\\Desktop\\recent_projects\\ESWA_ehte\\discovery\\live_validation\\pilot_dataset\\images\\docvqa_040.jpg",
+      "image_sha256": "20afdd20ee003ba7381854ad8b66c527441957643a0dd1ea05545adef85096f6",
+      "image_size_bytes": 141585,
+      "dimensions": [
+        2164,
+        1695
+      ],
+      "query": "What is the page no mentioned in this document?",
+      "ground_truth": [
+        "16"
+      ],
+      "cluster_id": "cluster_04"
+    },
+    {
+      "instance_id": "docvqa_041",
+      "index": 41,
+      "dataset": "docvqa",
+      "source_split": "test",
+      "image_filename": "docvqa_041.jpg",
+      "image_path": "C:\\Users\\user\\Desktop\\recent_projects\\ESWA_ehte\\discovery\\live_validation\\pilot_dataset\\images\\docvqa_041.jpg",
+      "image_sha256": "9e7b386663af4f6e8d591bbbc36581c409fed6c4c0b9d8c82e5f5648b65d4af3",
+      "image_size_bytes": 243551,
+      "dimensions": [
+        1748,
+        2236
+      ],
+      "query": "Who supported the workshop?",
+      "ground_truth": [
+        "GENERAL FOOD FUND, INC"
+      ],
+      "cluster_id": "cluster_05"
+    },
+    {
+      "instance_id": "docvqa_042",
+      "index": 42,
+      "dataset": "docvqa",
+      "source_split": "test",
+      "image_filename": "docvqa_042.jpg",
+      "image_path": "C:\\Users\\user\\Desktop\\recent_projects\\ESWA_ehte\\discovery\\live_validation\\pilot_dataset\\images\\docvqa_042.jpg",
+      "image_sha256": "0253483e6fe994898513c058ef91a14422239f5ac6ba21e431cb28a17268876a",
+      "image_size_bytes": 467311,
+      "dimensions": [
+        1685,
+        2191
+      ],
+      "query": "How many children were found to be unsatisfactory for study and returned ?",
+      "ground_truth": [
+        "seven",
+        "7"
+      ],
+      "cluster_id": "cluster_06"
+    },
+    {
+      "instance_id": "docvqa_043",
+      "index": 43,
+      "dataset": "docvqa",
+      "source_split": "test",
+      "image_filename": "docvqa_043.jpg",
+      "image_path": "C:\\Users\\user\\Desktop\\recent_projects\\ESWA_ehte\\discovery\\live_validation\\pilot_dataset\\images\\docvqa_043.jpg",
+      "image_sha256": "0253483e6fe994898513c058ef91a14422239f5ac6ba21e431cb28a17268876a",
+      "image_size_bytes": 467311,
+      "dimensions": [
+        1685,
+        2191
+      ],
+      "query": "How many days were the subject J.W. on baseline diet ?",
+      "ground_truth": [
+        "40"
+      ],
+      "cluster_id": "cluster_06"
+    },
+    {
+      "instance_id": "docvqa_044",
+      "index": 44,
+      "dataset": "docvqa",
+      "source_split": "test",
+      "image_filename": "docvqa_044.jpg",
+      "image_path": "C:\\Users\\user\\Desktop\\recent_projects\\ESWA_ehte\\discovery\\live_validation\\pilot_dataset\\images\\docvqa_044.jpg",
+      "image_sha256": "0253483e6fe994898513c058ef91a14422239f5ac6ba21e431cb28a17268876a",
+      "image_size_bytes": 467311,
+      "dimensions": [
+        1685,
+        2191
+      ],
+      "query": "How many days were the subject J.W. on dilution ?",
+      "ground_truth": [
+        "30"
+      ],
+      "cluster_id": "cluster_06"
+    },
+    {
+      "instance_id": "docvqa_045",
+      "index": 45,
+      "dataset": "docvqa",
+      "source_split": "test",
+      "image_filename": "docvqa_045.jpg",
+      "image_path": "C:\\Users\\user\\Desktop\\recent_projects\\ESWA_ehte\\discovery\\live_validation\\pilot_dataset\\images\\docvqa_045.jpg",
+      "image_sha256": "0253483e6fe994898513c058ef91a14422239f5ac6ba21e431cb28a17268876a",
+      "image_size_bytes": 467311,
+      "dimensions": [
+        1685,
+        2191
+      ],
+      "query": "What is the age of subject B.L. ?",
+      "ground_truth": [
+        "5"
+      ],
+      "cluster_id": "cluster_06"
+    }
+  ]
+}

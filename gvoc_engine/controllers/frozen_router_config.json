@@ -1,0 +1,40 @@
+{
+  "policy_name": "ccea_frozen_router_v1",
+  "version": "1.0.0",
+  "frozen_at": "2026-10-11T16:30:00Z",
+  "parameters": {
+    "kappa": 0.40,
+    "lambda_cost": 0.25,
+    "tau_safe": 0.45,
+    "tau_clean": 0.75,
+    "max_steps": 2,
+    "cost_per_acquisition": 0.15,
+    "decision_margin_threshold": 0.01,
+    "max_output_tokens": 150,
+    "request_timeout_sec": 30.0
+  },
+  "state_features": [
+    "c_plan",
+    "c_exec",
+    "c_judg",
+    "c_consensus",
+    "d_layout",
+    "d_evidence",
+    "step_index",
+    "remaining_budget"
+  ],
+  "decision_rule": "Score(REGROUND) = delta_p_lcb - lambda_cost * cost_per_acquisition",
+  "mathematical_definitions": {
+    "p_stop": "clamp(c_plan*0.25 + c_exec*0.25 + c_judg*0.20 + c_consensus*0.15 - d_layout*0.35 - d_evidence*0.25, 0.05, 0.98)",
+    "delta_p_hat": "clamp(d_layout*1.5 + d_evidence*1.2 - c_judg*0.2, 0.01, 0.40)",
+    "sigma_hat": "sqrt(0.01 + 0.10*(1-c_consensus)^2 + 0.08*d_evidence^2 + 0.05*d_layout^2)",
+    "delta_p_lcb": "max(0.0, delta_p_hat - kappa * sigma_hat)",
+    "uncertainty_qualification": "Heuristic uncertainty penalty; NOT a calibrated Bayesian posterior."
+  },
+  "action_selection": {
+    "STOP": "Selected when input is clean (d_layout<0.15, d_evidence<0.15, p_stop>=tau_clean) OR acquisition score <= 0.01 and p_stop >= tau_safe.",
+    "REGROUND": "Selected when crop is geometrically valid, contains required context, and Score(REGROUND) > 0.01.",
+    "ABSTAIN": "Selected when acquisition score <= 0.01, crop invalid/budget exhausted, and p_stop < tau_safe."
+  },
+  "fallback_policy": "If localization fails or API fails, fallback to STOP using full overview answer if p_stop >= tau_safe, else ABSTAIN."
+}

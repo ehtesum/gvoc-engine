@@ -1,0 +1,11 @@
+# Security: Never commit environment files or database outputs
+.env
+*.env
+*.db
+*.sqlite
+*.sqlite3
+__pycache__/
+*.pyc
+figures/
+output/
+scratch/

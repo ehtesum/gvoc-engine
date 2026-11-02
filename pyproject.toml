@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gvoc-engine"
+version = "1.0.0"
+description = "Gated Value of Compute for Visual Document Understanding"
+authors = [{name = "Ehtesum"}]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

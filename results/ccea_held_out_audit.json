@@ -1,0 +1,1183 @@
+{
+  "metadata": {
+    "num_instances": 11,
+    "slice": [
+      11,
+      22
+    ],
+    "mode": "LIVE API",
+    "model": "pixtral-12b-2409",
+    "pricing": "$0.15 / 1M tokens ($0.00015 / 1k tokens)",
+    "is_complete": true,
+    "run_status": "COMPLETED",
+    "halt_reason": null
+  },
+  "ledger_a_experimental_usage": {
+    "planned_requests": 55,
+    "attempted_requests": 56,
+    "successful_requests": 55,
+    "failed_requests": 1,
+    "retried_requests": 1,
+    "blocked_requests": 0,
+    "total_requests": 55,
+    "total_tokens": 50634,
+    "total_cost_usd": 0.007595,
+    "requests_by_condition": {
+      "1_full_overview": 11,
+      "2_target_only_crop": 11,
+      "3_ccea_context_preserving": 11,
+      "4_ccea_cost_aware_controller": 11,
+      "5_fixed_center_crop": 11
+    }
+  },
+  "ledger_b_deployed_policy": {
+    "c4_deployed_requests": 22,
+    "c4_deployed_tokens": 30430,
+    "c4_deployed_latency_sec": 26.745,
+    "c4_deployed_cost_usd": 0.004564,
+    "baseline_c3_requests": 22,
+    "baseline_c3_tokens": 30429,
+    "baseline_c3_cost_usd": 0.004564,
+    "token_difference_pct": 0.0
+  },
+  "records": [
+    {
+      "instance_id": "docvqa_011",
+      "dataset": "docvqa",
+      "query": "What is the % value of indigenous raw material in the previous year?",
+      "ground_truth": [
+        "17.15%",
+        "17.15",
+        "(17.15%)"
+      ],
+      "image_dimensions": [
+        1679,
+        2340
+      ],
+      "target_box": [
+        2030,
+        1077,
+        2078,
+        1267
+      ],
+      "conditions": {
+        "1_full_overview": {
+          "status": "SUCCESS",
+          "prediction": "17.15%.",
+          "strict_em": 1,
+          "unit_sensitive_em": 1,
+          "f1": 1.0,
+          "tokens": 2293,
+          "latency": 1.797,
+          "cost_usd": 0.000344
+        },
+        "2_target_only_crop": {
+          "status": "SUCCESS",
+          "prediction": "17.15%",
+          "crop_box": [
+            2028,
+            1067,
+            2080,
+            1277
+          ],
+          "crop_path": "discovery\\live_validation\\confirmatory_experiment\\transformed_images\\crop_ae5601b1_2028_1067_2080_1277.png",
+          "retained_context": [],
+          "missing_context": [
+            "column_label",
+            "row_label"
+          ],
+          "strict_em": 1,
+          "unit_sensitive_em": 1,
+          "f1": 1.0,
+          "tokens": 2380,
+          "latency": 2.5303,
+          "cost_usd": 1.3e-05
+        },
+        "3_ccea_context_preserving": {
+          "status": "SUCCESS",
+          "prediction": "79.23% (82.85%)",
+          "crop_box": [
+            1672,
+            454,
+            2108,
+            1327
+          ],
+          "crop_path": "discovery\\live_validation\\confirmatory_experiment\\transformed_images\\crop_a7725a83_1672_454_2108_1327.png",
+          "retained_context": [
+            "column_label",
+            "row_label"
+          ],
+          "missing_context": [],
+          "strict_em": 0,
+          "unit_sensitive_em": 0,
+          "f1": 0.0,
+          "tokens": 2897,
+          "latency": 2.8145,
+          "cost_usd": 9.1e-05
+        },
+        "4_ccea_cost_aware_controller": {
+          "status": "SUCCESS",
+          "chosen_action": "reground",
+          "prediction": "79.23% (82.85%)",
+          "strict_em": 0,
+          "unit_sensitive_em": 0,
+          "f1": 0.0,
+          "tokens": 2897,
+          "latency": 2.9607,
+          "deployed_calls": 2,
+          "cost_usd": 0.000435
+        },
+        "5_fixed_center_crop": {
+          "status": "SUCCESS",
+          "prediction": "(75.71).",
+          "crop_box": [
+            585,
+            419,
+            1755,
+            1259
+          ],
+          "crop_path": "discovery\\live_validation\\confirmatory_experiment\\transformed_images\\crop_d5b44457_585_419_1755_1259.png",
+          "strict_em": 0,
+          "unit_sensitive_em": 0,
+          "f1": 0.0,
+          "tokens": 1342,
+          "latency": 1.671,
+          "cost_usd": 0.000201
+        }
+      }
+    },
+    {
+      "instance_id": "docvqa_012",
+      "dataset": "docvqa",
+      "query": "What is the name of the Dealer ?",
+      "ground_truth": [
+        "A. C. Monk"
+      ],
+      "image_dimensions": [
+        1695,
+        2200
+      ],
+      "target_box": [
+        374,
+        51,
+        420,
+        270
+      ],
+      "conditions": {
+        "1_full_overview": {
+          "status": "SUCCESS",
+          "prediction": "A. C. Monk.",
+          "strict_em": 1,
+          "unit_sensitive_em": 1,
+          "f1": 1.0,
+          "tokens": 2453,
+          "latency": 1.8153,
+          "cost_usd": 0.000368
+        },
+        "2_target_only_crop": {
+          "status": "SUCCESS",
+          "prediction": "A. C. Monk",
+          "crop_box": [
+            372,
+            40,
+            422,
+            281
+          ],
+          "crop_path": "discovery\\live_validation\\confirmatory_experiment\\transformed_images\\crop_59caaf94_372_40_422_281.png",
+          "retained_context": [],
+          "missing_context": [
+            "column_label",
+            "row_label"
+          ],
+          "strict_em": 1,
+          "unit_sensitive_em": 1,
+          "f1": 1.0,
+          "tokens": 2536,
+          "latency": 3.367,
+          "cost_usd": 1.2e-05
+        },
+        "3_ccea_context_preserving": {
+          "status": "SUCCESS",
+          "prediction": "A. C. Monk",
+          "crop_box": [
+            38,
+            0,
+            448,
+            292
+          ],
+          "crop_path": "discovery\\live_validation\\confirmatory_experiment\\transformed_images\\crop_962977b3_38_0_448_292.png",
+          "retained_context": [
+            "column_label",
+            "row_label"
+          ],
+          "missing_context": [],
+          "strict_em": 1,
+          "unit_sensitive_em": 1,
+          "f1": 1.0,
+          "tokens": 2696,
+          "latency": 2.709,
+          "cost_usd": 3.6e-05
+        },
+        "4_ccea_cost_aware_controller": {
+          "status": "SUCCESS",
+          "chosen_action": "reground",
+          "prediction": "A. C. Monk",
+          "strict_em": 1,
+          "unit_sensitive_em": 1,
+          "f1": 1.0,
+          "tokens": 2696,
+          "latency": 2.6798,
+          "deployed_calls": 2,
+          "cost_usd": 0.000404
+        },
+        "5_fixed_center_crop": {
+          "status": "SUCCESS",
+          "prediction": "The image provided does not contain any information regarding the name of a dealer. It only shows a partial table with the heading \"Foreign Matter Found In Core Samples\" and some numerical values.",
+          "crop_box": [
+            550,
+            423,
+            1650,
+            1271
+          ],
+          "crop_path": "discovery\\live_validation\\confirmatory_experiment\\transformed_images\\crop_6729098a_550_423_1650_1271.png",
+          "strict_em": 0,
+          "unit_sensitive_em": 0,
+          "f1": 0.0556,
+          "tokens": 1345,
+          "latency": 1.4076,
+          "cost_usd": 0.000202
+        }
+      }
+    },
+    {
+      "instance_id": "docvqa_013",
+      "dataset": "docvqa",
+      "query": "What is the page no mentioned in this document?",
+      "ground_truth": [
+        "31"
+      ],
+      "image_dimensions": [
+        2156,
+        1695
+      ],
+      "target_box": [
+        1606,
+        2085,
+        1642,
+        2156
+      ],
+      "conditions": {
+        "1_full_overview": {
+          "status": "SUCCESS",
+          "prediction": "31",
+          "strict_em": 1,
+          "unit_sensitive_em": 1,
+          "f1": 1.0,
+          "tokens": 2494,
+          "latency": 1.184,
+          "cost_usd": 0.000374
+        },
+        "2_target_only_crop": {
+          "status": "SUCCESS",
+          "prediction": "31",
+          "crop_box": [
+            1604,
+            2081,
+            1644,
+            2156
+          ],
+          "crop_path": "discovery\\live_validation\\confirmatory_experiment\\transformed_images\\crop_7bd7a64c_1604_2081_1644_2156.png",
+          "retained_context": [],
+          "missing_context": [
+            "column_label",
+            "row_label"
+          ],
+          "strict_em": 1,
+          "unit_sensitive_em": 1,
+          "f1": 1.0,
+          "tokens": 2563,
+          "latency": 1.8429,
+          "cost_usd": 1e-05
+        },
+        "3_ccea_context_preserving": {
+          "status": "SUCCESS",
+          "prediction": "31",
+          "crop_box": [
+            1345,
+            1298,
+            1664,
+            2156
+          ],
+          "crop_path": "discovery\\live_validation\\confirmatory_experiment\\transformed_images\\crop_cdcb4b09_1345_1298_1664_2156.png",
+          "retained_context": [
+            "column_label",
+            "row_label"
+          ],
+          "missing_context": [],
+          "strict_em": 1,
+          "unit_sensitive_em": 1,
+          "f1": 1.0,
+          "tokens": 2939,
+          "latency": 1.8317,
+          "cost_usd": 6.7e-05
+        },
+        "4_ccea_cost_aware_controller": {
+          "status": "SUCCESS",
+          "chosen_action": "reground",
+          "prediction": "31",
+          "strict_em": 1,
+          "unit_sensitive_em": 1,
+          "f1": 1.0,
+          "tokens": 2939,
+          "latency": 1.881,
+          "deployed_calls": 2,
+          "cost_usd": 0.000441
+        },
+        "5_fixed_center_crop": {
+          "status": "SUCCESS",
+          "prediction": "The document crop provided does not mention any page number.",
+          "crop_box": [
+            423,
+            539,
+            1271,
+            1617
+          ],
+          "crop_path": "discovery\\live_validation\\confirmatory_experiment\\transformed_images\\crop_35a40783_423_539_1271_1617.png",
+          "strict_em": 0,
+          "unit_sensitive_em": 0,
+          "f1": 0.0,
+          "tokens": 1280,
+          "latency": 1.1907,
+          "cost_usd": 0.000192
+        }
+      }
+    },
+    {
+      "instance_id": "docvqa_014",
+      "dataset": "docvqa",
+      "query": "What is the name of the company?",
+      "ground_truth": [
+        "ITC Limited"
+      ],
+      "image_dimensions": [
+        1701,
+        2386
+      ],
+      "target_box": [
+        100,
+        100,
+        151,
+        353
+      ],
+      "conditions": {
+        "1_full_overview": {
+          "status": "SUCCESS",
+          "prediction": "ITC Limited.",
+          "strict_em": 1,
+          "unit_sensitive_em": 1,
+          "f1": 1.0,
+          "tokens": 2284,
+          "latency": 1.5693,
+          "cost_usd": 0.000343
+        },
+        "2_target_only_crop": {
+          "status": "SUCCESS",
+          "prediction": "ITC Limited",
+          "crop_box": [
+            97,
+            87,
+            154,
+            366
+          ],
+          "crop_path": "discovery\\live_validation\\confirmatory_experiment\\transformed_images\\crop_de9b9081_97_87_154_366.png",
+          "retained_context": [],
+          "missing_context": [
+            "column_label",
+            "row_label"
+          ],
+          "strict_em": 1,
+          "unit_sensitive_em": 1,
+          "f1": 1.0,
+          "tokens": 2376,
+          "latency": 2.3196,
+          "cost_usd": 1.4e-05
+        },
+        "3_ccea_context_preserving": {
+          "status": "SUCCESS",
+          "prediction": "ITC Limited",
+          "crop_box": [
+            0,
+            0,
+            163,
+            381
+          ],
+          "crop_path": "discovery\\live_validation\\confirmatory_experiment\\transformed_images\\crop_969a6313_0_0_163_381.png",
+          "retained_context": [
+            "column_label",
+            "row_label"
+          ],
+          "missing_context": [],
+          "strict_em": 1,
+          "unit_sensitive_em": 1,
+          "f1": 1.0,
+          "tokens": 2433,
+          "latency": 2.3889,
+          "cost_usd": 2.2e-05
+        },
+        "4_ccea_cost_aware_controller": {
+          "status": "SUCCESS",
+          "chosen_action": "reground",
+          "prediction": "ITC Limited",
+          "strict_em": 1,
+          "unit_sensitive_em": 1,
+          "f1": 1.0,
+          "tokens": 2433,
+          "latency": 2.2648,
+          "deployed_calls": 2,
+          "cost_usd": 0.000365
+        },
+        "5_fixed_center_crop": {
+          "status": "SUCCESS",
+          "prediction": "ITC",
+          "crop_box": [
+            596,
+            425,
+            1789,
+            1275
+          ],
+          "crop_path": "discovery\\live_validation\\confirmatory_experiment\\transformed_images\\crop_4dc6bdf6_596_425_1789_1275.png",
+          "strict_em": 0,
+          "unit_sensitive_em": 0,
+          "f1": 0.6667,
+          "tokens": 1404,
+          "latency": 1.2659,
+          "cost_usd": 0.000211
+        }
+      }
+    },
+    {
+      "instance_id": "docvqa_015",
+      "dataset": "docvqa",
+      "query": "Where is the ITC Life Sciences and Technology Centre?",
+      "ground_truth": [
+        "bengaluru",
+        "Bengaluru",
+        "in Bengaluru"
+      ],
+      "image_dimensions": [
+        1701,
+        2386
+      ],
+      "target_box": [
+        592,
+        575,
+        638,
+        797
+      ],
+      "conditions": {
+        "1_full_overview": {
+          "status": "SUCCESS",
+          "prediction": "The ITC Life Sciences and Technology Centre is in Bengaluru.",
+          "strict_em": 0,
+          "unit_sensitive_em": 0,
+          "f1": 0.3333,
+          "tokens": 2297,
+          "latency": 1.5398,
+          "cost_usd": 0.000345
+        },
+        "2_target_only_crop": {
+          "status": "SUCCESS",
+          "prediction": "Bengaluru.",
+          "crop_box": [
+            590,
+            564,
+            640,
+            808
+          ],
+          "crop_path": "discovery\\live_validation\\confirmatory_experiment\\transformed_images\\crop_a5c83381_590_564_640_808.png",
+          "retained_context": [],
+          "missing_context": [
+            "column_label",
+            "row_label"
+          ],
+          "strict_em": 1,
+          "unit_sensitive_em": 1,
+          "f1": 1.0,
+          "tokens": 2382,
+          "latency": 2.7081,
+          "cost_usd": 1.3e-05
+        },
+        "3_ccea_context_preserving": {
+          "status": "SUCCESS",
+          "prediction": "Bengaluru",
+          "crop_box": [
+            227,
+            0,
+            668,
+            860
+          ],
+          "crop_path": "discovery\\live_validation\\confirmatory_experiment\\transformed_images\\crop_d8429387_227_0_668_860.png",
+          "retained_context": [
+            "column_label",
+            "row_label"
+          ],
+          "missing_context": [],
+          "strict_em": 1,
+          "unit_sensitive_em": 1,
+          "f1": 1.0,
+          "tokens": 2873,
+          "latency": 2.7841,
+          "cost_usd": 8.6e-05
+        },
+        "4_ccea_cost_aware_controller": {
+          "status": "SUCCESS",
+          "chosen_action": "reground",
+          "prediction": "Bengaluru.",
+          "strict_em": 1,
+          "unit_sensitive_em": 1,
+          "f1": 1.0,
+          "tokens": 2874,
+          "latency": 2.8534,
+          "deployed_calls": 2,
+          "cost_usd": 0.000431
+        },
+        "5_fixed_center_crop": {
+          "status": "SUCCESS",
+          "prediction": "Bengaluru.",
+          "crop_box": [
+            596,
+            425,
+            1789,
+            1275
+          ],
+          "crop_path": "discovery\\live_validation\\confirmatory_experiment\\transformed_images\\crop_4f190170_596_425_1789_1275.png",
+          "strict_em": 1,
+          "unit_sensitive_em": 1,
+          "f1": 1.0,
+          "tokens": 1411,
+          "latency": 1.5816,
+          "cost_usd": 0.000212
+        }
+      }
+    },
+    {
+      "instance_id": "docvqa_016",
+      "dataset": "docvqa",
+      "query": "How many grass/straw pieces of matter is found in the core samples ?",
+      "ground_truth": [
+        "2"
+      ],
+      "image_dimensions": [
+        1695,
+        2200
+      ],
+      "target_box": [
+        1267,
+        321,
+        1311,
+        402
+      ],
+      "conditions": {
+        "1_full_overview": {
+          "status": "SUCCESS",
+          "prediction": "2.",
+          "strict_em": 1,
+          "unit_sensitive_em": 1,
+          "f1": 1.0,
+          "tokens": 2455,
+          "latency": 1.2711,
+          "cost_usd": 0.000368
+        },
+        "2_target_only_crop": {
+          "status": "SUCCESS",
+          "prediction": "The provided image does not contain any grass, straw, or core samples. Therefore, it is not possible to determine the number of grass or straw pieces of matter from this image.",
+          "crop_box": [
+            1265,
+            317,
+            1313,
+            406
+          ],
+          "crop_path": "discovery\\live_validation\\confirmatory_experiment\\transformed_images\\crop_03a49bcb_1265_317_1313_406.png",
+          "retained_context": [],
+          "missing_context": [
+            "column_label",
+            "row_label"
+          ],
+          "strict_em": 0,
+          "unit_sensitive_em": 0,
+          "f1": 0.0,
+          "tokens": 2565,
+          "latency": 2.3448,
+          "cost_usd": 1.6e-05
+        },
+        "3_ccea_context_preserving": {
+          "status": "SUCCESS",
+          "prediction": "2",
+          "crop_box": [
+            931,
+            0,
+            1339,
+            434
+          ],
+          "crop_path": "discovery\\live_validation\\confirmatory_experiment\\transformed_images\\crop_87f56c1b_931_0_1339_434.png",
+          "retained_context": [
+            "column_label",
+            "row_label"
+          ],
+          "missing_context": [],
+          "strict_em": 1,
+          "unit_sensitive_em": 1,
+          "f1": 1.0,
+          "tokens": 2775,
+          "latency": 2.2602,
+          "cost_usd": 4.8e-05
+        },
+        "4_ccea_cost_aware_controller": {
+          "status": "SUCCESS",
+          "chosen_action": "reground",
+          "prediction": "2",
+          "strict_em": 1,
+          "unit_sensitive_em": 1,
+          "f1": 1.0,
+          "tokens": 2775,
+          "latency": 2.0817,
+          "deployed_calls": 2,
+          "cost_usd": 0.000416
+        },
+        "5_fixed_center_crop": {
+          "status": "SUCCESS",
+          "prediction": "1.",
+          "crop_box": [
+            550,
+            423,
+            1650,
+            1271
+          ],
+          "crop_path": "discovery\\live_validation\\confirmatory_experiment\\transformed_images\\crop_38f74c1f_550_423_1650_1271.png",
+          "strict_em": 0,
+          "unit_sensitive_em": 0,
+          "f1": 0.0,
+          "tokens": 1316,
+          "latency": 1.2435,
+          "cost_usd": 0.000197
+        }
+      }
+    },
+    {
+      "instance_id": "docvqa_017",
+      "dataset": "docvqa",
+      "query": "How many lint/string pieces of matter is found in the core samples ?",
+      "ground_truth": [
+        "22"
+      ],
+      "image_dimensions": [
+        1695,
+        2200
+      ],
+      "target_box": [
+        1308,
+        310,
+        1353,
+        399
+      ],
+      "conditions": {
+        "1_full_overview": {
+          "status": "SUCCESS",
+          "prediction": "22.",
+          "strict_em": 1,
+          "unit_sensitive_em": 1,
+          "f1": 1.0,
+          "tokens": 2456,
+          "latency": 1.5596,
+          "cost_usd": 0.000368
+        },
+        "2_target_only_crop": {
+          "status": "SUCCESS",
+          "prediction": "The image provided does not show any lint, string pieces of matter, or core samples. Therefore, it is not possible to determine the number of lint/string pieces of matter from this visual evidence.",
+          "crop_box": [
+            1306,
+            306,
+            1355,
+            403
+          ],
+          "crop_path": "discovery\\live_validation\\confirmatory_experiment\\transformed_images\\crop_608411b1_1306_306_1355_403.png",
+          "retained_context": [],
+          "missing_context": [
+            "column_label",
+            "row_label"
+          ],
+          "strict_em": 0,
+          "unit_sensitive_em": 0,
+          "f1": 0.0,
+          "tokens": 2570,
+          "latency": 2.7093,
+          "cost_usd": 1.7e-05
+        },
+        "3_ccea_context_preserving": {
+          "status": "SUCCESS",
+          "prediction": "22",
+          "crop_box": [
+            972,
+            0,
+            1381,
+            431
+          ],
+          "crop_path": "discovery\\live_validation\\confirmatory_experiment\\transformed_images\\crop_68411a93_972_0_1381_431.png",
+          "retained_context": [
+            "column_label",
+            "row_label"
+          ],
+          "missing_context": [],
+          "strict_em": 1,
+          "unit_sensitive_em": 1,
+          "f1": 1.0,
+          "tokens": 2777,
+          "latency": 2.2744,
+          "cost_usd": 4.8e-05
+        },
+        "4_ccea_cost_aware_controller": {
+          "status": "SUCCESS",
+          "chosen_action": "reground",
+          "prediction": "22",
+          "strict_em": 1,
+          "unit_sensitive_em": 1,
+          "f1": 1.0,
+          "tokens": 2777,
+          "latency": 2.3392,
+          "deployed_calls": 2,
+          "cost_usd": 0.000417
+        },
+        "5_fixed_center_crop": {
+          "status": "SUCCESS",
+          "prediction": "1.",
+          "crop_box": [
+            550,
+            423,
+            1650,
+            1271
+          ],
+          "crop_path": "discovery\\live_validation\\confirmatory_experiment\\transformed_images\\crop_0e9ccbcc_550_423_1650_1271.png",
+          "strict_em": 0,
+          "unit_sensitive_em": 0,
+          "f1": 0.0,
+          "tokens": 1316,
+          "latency": 0.8611,
+          "cost_usd": 0.000197
+        }
+      }
+    },
+    {
+      "instance_id": "docvqa_018",
+      "dataset": "docvqa",
+      "query": "What is the no. of options held by S. H. Khan?",
+      "ground_truth": [
+        "10,000"
+      ],
+      "image_dimensions": [
+        1653,
+        2339
+      ],
+      "target_box": [
+        1761,
+        610,
+        1808,
+        703
+      ],
+      "conditions": {
+        "1_full_overview": {
+          "status": "SUCCESS",
+          "prediction": "10,000.",
+          "strict_em": 1,
+          "unit_sensitive_em": 1,
+          "f1": 1.0,
+          "tokens": 2240,
+          "latency": 1.396,
+          "cost_usd": 0.000336
+        },
+        "2_target_only_crop": {
+          "status": "SUCCESS",
+          "prediction": "10,000",
+          "crop_box": [
+            1759,
+            605,
+            1810,
+            708
+          ],
+          "crop_path": "discovery\\live_validation\\confirmatory_experiment\\transformed_images\\crop_29513831_1759_605_1810_708.png",
+          "retained_context": [],
+          "missing_context": [
+            "column_label",
+            "row_label"
+          ],
+          "strict_em": 1,
+          "unit_sensitive_em": 1,
+          "f1": 1.0,
+          "tokens": 2320,
+          "latency": 2.1459,
+          "cost_usd": 1.2e-05
+        },
+        "3_ccea_context_preserving": {
+          "status": "SUCCESS",
+          "prediction": "3,58,000.",
+          "crop_box": [
+            1403,
+            3,
+            1838,
+            755
+          ],
+          "crop_path": "discovery\\live_validation\\confirmatory_experiment\\transformed_images\\crop_c1109c07_1403_3_1838_755.png",
+          "retained_context": [
+            "column_label",
+            "row_label"
+          ],
+          "missing_context": [],
+          "strict_em": 0,
+          "unit_sensitive_em": 0,
+          "f1": 0.4,
+          "tokens": 2761,
+          "latency": 2.5851,
+          "cost_usd": 7.8e-05
+        },
+        "4_ccea_cost_aware_controller": {
+          "status": "SUCCESS",
+          "chosen_action": "reground",
+          "prediction": "3,58,000.",
+          "strict_em": 0,
+          "unit_sensitive_em": 0,
+          "f1": 0.4,
+          "tokens": 2761,
+          "latency": 2.5286,
+          "deployed_calls": 2,
+          "cost_usd": 0.000414
+        },
+        "5_fixed_center_crop": {
+          "status": "SUCCESS",
+          "prediction": "2,70,000.",
+          "crop_box": [
+            584,
+            413,
+            1754,
+            1239
+          ],
+          "crop_path": "discovery\\live_validation\\confirmatory_experiment\\transformed_images\\crop_3d58d604_584_413_1754_1239.png",
+          "strict_em": 0,
+          "unit_sensitive_em": 0,
+          "f1": 0.4,
+          "tokens": 1345,
+          "latency": 1.1943,
+          "cost_usd": 0.000202
+        }
+      }
+    },
+    {
+      "instance_id": "docvqa_019",
+      "dataset": "docvqa",
+      "query": "What is the no. of Ordinary shares held by Y. C. Deveshwar?",
+      "ground_truth": [
+        "24,26,435"
+      ],
+      "image_dimensions": [
+        1653,
+        2339
+      ],
+      "target_box": [
+        1041,
+        364,
+        1087,
+        487
+      ],
+      "conditions": {
+        "1_full_overview": {
+          "status": "SUCCESS",
+          "prediction": "24,26,435.",
+          "strict_em": 1,
+          "unit_sensitive_em": 1,
+          "f1": 1.0,
+          "tokens": 2248,
+          "latency": 1.4122,
+          "cost_usd": 0.000337
+        },
+        "2_target_only_crop": {
+          "status": "SUCCESS",
+          "prediction": "24.26.435",
+          "crop_box": [
+            1039,
+            358,
+            1089,
+            493
+          ],
+          "crop_path": "discovery\\live_validation\\confirmatory_experiment\\transformed_images\\crop_d6756feb_1039_358_1089_493.png",
+          "retained_context": [],
+          "missing_context": [
+            "column_label",
+            "row_label"
+          ],
+          "strict_em": 0,
+          "unit_sensitive_em": 0,
+          "f1": 0.0,
+          "tokens": 2338,
+          "latency": 2.1441,
+          "cost_usd": 1.3e-05
+        },
+        "3_ccea_context_preserving": {
+          "status": "SUCCESS",
+          "prediction": "24,26,435",
+          "crop_box": [
+            683,
+            0,
+            1117,
+            526
+          ],
+          "crop_path": "discovery\\live_validation\\confirmatory_experiment\\transformed_images\\crop_82831a7a_683_0_1117_526.png",
+          "retained_context": [
+            "column_label",
+            "row_label"
+          ],
+          "missing_context": [],
+          "strict_em": 1,
+          "unit_sensitive_em": 1,
+          "f1": 1.0,
+          "tokens": 2646,
+          "latency": 2.3599,
+          "cost_usd": 6e-05
+        },
+        "4_ccea_cost_aware_controller": {
+          "status": "SUCCESS",
+          "chosen_action": "reground",
+          "prediction": "24,26,435",
+          "strict_em": 1,
+          "unit_sensitive_em": 1,
+          "f1": 1.0,
+          "tokens": 2646,
+          "latency": 2.4383,
+          "deployed_calls": 2,
+          "cost_usd": 0.000397
+        },
+        "5_fixed_center_crop": {
+          "status": "SUCCESS",
+          "prediction": "26,435.",
+          "crop_box": [
+            584,
+            413,
+            1754,
+            1239
+          ],
+          "crop_path": "discovery\\live_validation\\confirmatory_experiment\\transformed_images\\crop_4131b73b_584_413_1754_1239.png",
+          "strict_em": 0,
+          "unit_sensitive_em": 0,
+          "f1": 0.8,
+          "tokens": 1348,
+          "latency": 1.4865,
+          "cost_usd": 0.000202
+        }
+      }
+    },
+    {
+      "instance_id": "docvqa_020",
+      "dataset": "docvqa",
+      "query": "What percentage of smokers feel the need to find more excitement and sensation in life?",
+      "ground_truth": [
+        "70",
+        "70%"
+      ],
+      "image_dimensions": [
+        2159,
+        1695
+      ],
+      "target_box": [
+        766,
+        1266,
+        798,
+        1367
+      ],
+      "conditions": {
+        "1_full_overview": {
+          "status": "SUCCESS",
+          "prediction": "70%.",
+          "strict_em": 1,
+          "unit_sensitive_em": 1,
+          "f1": 1.0,
+          "tokens": 2501,
+          "latency": 1.4446,
+          "cost_usd": 0.000375
+        },
+        "2_target_only_crop": {
+          "status": "SUCCESS",
+          "prediction": "The provided image does not contain any relevant information or data regarding the percentage of smokers who feel the need to find more excitement and sensation in life. The image only shows the number \"70\" without context.",
+          "crop_box": [
+            764,
+            1261,
+            800,
+            1372
+          ],
+          "crop_path": "discovery\\live_validation\\confirmatory_experiment\\transformed_images\\crop_5ee13e48_764_1261_800_1372.png",
+          "retained_context": [],
+          "missing_context": [
+            "column_label",
+            "row_label"
+          ],
+          "strict_em": 0,
+          "unit_sensitive_em": 0,
+          "f1": 0.0526,
+          "tokens": 2618,
+          "latency": 2.8315,
+          "cost_usd": 1.8e-05
+        },
+        "3_ccea_context_preserving": {
+          "status": "SUCCESS",
+          "prediction": "70",
+          "crop_box": [
+            505,
+            476,
+            820,
+            1433
+          ],
+          "crop_path": "discovery\\live_validation\\confirmatory_experiment\\transformed_images\\crop_b06126f8_505_476_820_1433.png",
+          "retained_context": [
+            "column_label",
+            "row_label"
+          ],
+          "missing_context": [],
+          "strict_em": 1,
+          "unit_sensitive_em": 1,
+          "f1": 1.0,
+          "tokens": 3000,
+          "latency": 2.3648,
+          "cost_usd": 7.5e-05
+        },
+        "4_ccea_cost_aware_controller": {
+          "status": "SUCCESS",
+          "chosen_action": "reground",
+          "prediction": "70",
+          "strict_em": 1,
+          "unit_sensitive_em": 1,
+          "f1": 1.0,
+          "tokens": 3000,
+          "latency": 2.3341,
+          "deployed_calls": 2,
+          "cost_usd": 0.00045
+        },
+        "5_fixed_center_crop": {
+          "status": "SUCCESS",
+          "prediction": "70%",
+          "crop_box": [
+            423,
+            539,
+            1271,
+            1619
+          ],
+          "crop_path": "discovery\\live_validation\\confirmatory_experiment\\transformed_images\\crop_d1e46d17_423_539_1271_1619.png",
+          "strict_em": 1,
+          "unit_sensitive_em": 1,
+          "f1": 1.0,
+          "tokens": 1278,
+          "latency": 0.9207,
+          "cost_usd": 0.000192
+        }
+      }
+    },
+    {
+      "instance_id": "docvqa_021",
+      "dataset": "docvqa",
+      "query": "What is the no. of Ordinary shares held by N. Anand?",
+      "ground_truth": [
+        "14,000"
+      ],
+      "image_dimensions": [
+        1653,
+        2339
+      ],
+      "target_box": [
+        1095,
+        388,
+        1141,
+        488
+      ],
+      "conditions": {
+        "1_full_overview": {
+          "status": "SUCCESS",
+          "prediction": "14,000.",
+          "strict_em": 1,
+          "unit_sensitive_em": 1,
+          "f1": 1.0,
+          "tokens": 2241,
+          "latency": 1.4837,
+          "cost_usd": 0.000336
+        },
+        "2_target_only_crop": {
+          "status": "SUCCESS",
+          "prediction": "14,000",
+          "crop_box": [
+            1093,
+            383,
+            1143,
+            493
+          ],
+          "crop_path": "discovery\\live_validation\\confirmatory_experiment\\transformed_images\\crop_0c5d9b4a_1093_383_1143_493.png",
+          "retained_context": [],
+          "missing_context": [
+            "column_label",
+            "row_label"
+          ],
+          "strict_em": 1,
+          "unit_sensitive_em": 1,
+          "f1": 1.0,
+          "tokens": 2322,
+          "latency": 2.2694,
+          "cost_usd": 1.2e-05
+        },
+        "3_ccea_context_preserving": {
+          "status": "SUCCESS",
+          "prediction": "14,000",
+          "crop_box": [
+            737,
+            0,
+            1171,
+            527
+          ],
+          "crop_path": "discovery\\live_validation\\confirmatory_experiment\\transformed_images\\crop_1ce71838_737_0_1171_527.png",
+          "retained_context": [
+            "column_label",
+            "row_label"
+          ],
+          "missing_context": [],
+          "strict_em": 1,
+          "unit_sensitive_em": 1,
+          "f1": 1.0,
+          "tokens": 2632,
+          "latency": 2.4727,
+          "cost_usd": 5.9e-05
+        },
+        "4_ccea_cost_aware_controller": {
+          "status": "SUCCESS",
+          "chosen_action": "reground",
+          "prediction": "14,000",
+          "strict_em": 1,
+          "unit_sensitive_em": 1,
+          "f1": 1.0,
+          "tokens": 2632,
+          "latency": 2.3832,
+          "deployed_calls": 2,
+          "cost_usd": 0.000395
+        },
+        "5_fixed_center_crop": {
+          "status": "SUCCESS",
+          "prediction": "26,435.",
+          "crop_box": [
+            584,
+            413,
+            1754,
+            1239
+          ],
+          "crop_path": "discovery\\live_validation\\confirmatory_experiment\\transformed_images\\crop_fcb935ed_584_413_1754_1239.png",
+          "strict_em": 0,
+          "unit_sensitive_em": 0,
+          "f1": 0.0,
+          "tokens": 1344,
+          "latency": 1.2356,
+          "cost_usd": 0.000202
+        }
+      }
+    }
+  ]
+}

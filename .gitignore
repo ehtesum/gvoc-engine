@@ -1,0 +1,67 @@
+# Hard file size limits & raw databases
+*.jsonl
+!data/sample_*.jsonl
+*.db
+*.sqlite
+*.sqlite3
+*.zip
+*.tar.gz
+
+# Credentials & environment
+.env
+.env.*
+*.env
+*.key
+*.pem
+*token*.txt
+api_tokens.txt
+credentials.json
+client_secrets.json
+
+# Office & temporary drafts
+*.docx
+~$*.docx
+*.pptx
+~$*.pptx
+*.xlsx
+~$*.xlsx
+
+# LaTeX build residues
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+texput.log
+
+# Python & runtime caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+.venv/
+venv/
+env/
+build/
+dist/
+*.egg-info/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Temporary renders and crops
+page_*.png
+crop_*.png
+*_preview.png
+audit_crops/
+ccea_crops/
+scratch/
+archive/
